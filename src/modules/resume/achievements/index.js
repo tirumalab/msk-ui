@@ -3,7 +3,7 @@ import variants from './variants';
 
 const Achievements = {
   metadata,
-  variants,
-}
+  variants
+};
 
 export default Achievements;

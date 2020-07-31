@@ -1,5 +1,5 @@
-import propertyTypes from 'msk-property-types'
-import themes from 'msk-themes'
+import propertyTypes from 'msk-property-types';
+import themes from 'msk-themes';
 
 const properties = {
   theme: {
@@ -21,15 +21,17 @@ const properties = {
       {
         name: 'Achievement text',
         type: propertyTypes.STRING_MULTI_LINE,
-        value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+        value:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
         required: true
       },
       {
         name: 'Achievement text',
         type: propertyTypes.STRING_MULTI_LINE,
-        value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+        value:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
         required: true
-      },
+      }
     ],
     required: true
   }
