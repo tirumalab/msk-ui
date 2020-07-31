@@ -20,7 +20,7 @@ const Basic = (
   }
 ) => {
   const styles = useStyles()
-  function render_list() {
+  function renderList() {
     return (
       <ol>
         {achievements.value.map((paragraph, id) => {
@@ -40,7 +40,7 @@ const Basic = (
     }}>
       <h1 style={styles.headlineText}>{headlineText.value}</h1>
       <hr />
-      {render_list()}
+      {renderList()}
     </div >
 
   );
