@@ -17,7 +17,7 @@ const properties = {
   imageUrl: {
     name: 'Image URL',
     type: propertyTypes.STRING,
-    value: 'https://mskdocuments.com/images/favicon.png',
+    value: 'https://github.com/ManojSatishkumar.png',
     required: false
   },
   designation: {
