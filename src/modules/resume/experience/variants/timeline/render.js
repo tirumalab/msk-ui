@@ -8,7 +8,7 @@ import {
   TimelineConnector,
   TimelineContent,
 } from '@material-ui/lab';
-import SchoolIcon from '@material-ui/icons/School';
+import WorkIcon from '@material-ui/icons/Work';
 import Typography from '@material-ui/core/Typography';
 
 
@@ -20,7 +20,7 @@ const useStyles = (theme) => ({
   headlineText: {
     margin: 0
   },
-  educationItem: {
+  experienceItem: {
     margin: 0
   },
   timelineStyle: {
@@ -35,32 +35,32 @@ const TimeLine = (
   {
     theme,
     headlineText,
-    education
+    experience
   }
 ) => {
   const styles = useStyles();
 
-  function renderEducation(educationDetails) {
+  function renderExperience(experienceDetails) {
     return <TimelineItem>
 
       <TimelineOppositeContent style={styles.timelineStyle}>
-        <Typography style={styles.educationItem}  >
-          {educationDetails.datesFrom.value} | {educationDetails.datesTo.value}
+        <Typography style={styles.experienceItem}  >
+          {experienceDetails.datesFrom.value} | {experienceDetails.datesTo.value}
         </Typography>
       </TimelineOppositeContent>
 
       <TimelineSeparator>
         <TimelineDot color="primary">
-          <SchoolIcon />
+          <WorkIcon />
         </TimelineDot>
         <TimelineConnector />
       </TimelineSeparator>
 
       <TimelineContent>
-        <Typography style={styles.educationItem} variant="h4"  >{educationDetails.degree.value}</Typography>
-        <Typography style={styles.educationItem} variant="body1">{educationDetails.university.value}</Typography>
+        <Typography style={styles.experienceItem} variant="h4"  >{experienceDetails.designation.value}</Typography>
+        <Typography style={styles.experienceItem} variant="body1">{experienceDetails.company.value}</Typography>
         <br />
-        <Typography style={styles.educationItem} variant="body2">{educationDetails.description.value}</Typography>
+        <Typography style={styles.educationItem} variant="body2">{experienceDetails.description.value}</Typography>
       </TimelineContent>
 
     </TimelineItem>
@@ -77,12 +77,10 @@ const TimeLine = (
 
       <Timeline >
 
-        {education.value.map((educationDetails, id) => {
+        {experience.value.map((experienceDetails, id) => {
           return <div key={id}>
             <br />
-            {renderEducation(educationDetails.value)}
-            {renderEducation(educationDetails.value)}
-            {renderEducation(educationDetails.value)}
+            {renderExperience(experienceDetails.value)}
           </div>
         })}
 
